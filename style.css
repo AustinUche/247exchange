@@ -41,11 +41,24 @@ nav {
   text-decoration: none;
   display: inline-block;
   padding: 5px;
-  border: 1px solid rgb(79, 99, 93);
-  border-radius: 5px;
   margin: 0 20px;
   text-align: center;
   color: rgb(79, 99, 93);
   transition: 0.5s;
   font-weight: 600;
+}
+.container .align{
+    display:flex;
+    justify-content:center;
+    align-self:center;
+    text-align:center;
+    margin-top:-1px;
+}
+.dropdown{
+    visibility: hidden;
+    display:flex;
+    flex-direction:column;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding:20px;
 }
