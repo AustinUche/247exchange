@@ -60,5 +60,14 @@ nav {
     flex-direction:column;
     background-color: white;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    padding:20px;
+    border-radius:10px;
+    padding:10px 0px;
+    width:auto;
+}
+#menu, #close{
+  display:none;
+  cursor:pointer;
+}
+.active{
+  display:block;
 }
