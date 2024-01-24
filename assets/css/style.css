@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+:root{
+  --dark-blue: #2b72e2;
+  --darker-blue: #536DFE;
+  --light-blue: #2874d3;
+  --light-purple: #9794E8;
+  --background: #f1f1f6;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family: 'Titillium Web', sans-serif;
+}
+body{
+  background-color: var(--background);
+  overflow-x:hidden;
+}
+body::before{
+  content:'';
+  position:absolute;
+  height:500px;
+  width:500px;
+  top:-20%;
+  left:-20%;
+  opacity:.9;
+  background-color:var(--darker-blue);
+  border-radius: 50%;
+  z-index:-1;
+}
+body::after{
+  content:'';
+  position:absolute;
+  height:500px;
+  width:500px;
+  background-color:var(--darker-blue);
+  top:50%;
+  opacity:.9;
+  right:-20%;
+  border-radius: 50%;
+  z-index:-1;
+} 
+nav {
+  display: flex;
+  justify-content: space-between;
+  top:0;
+  z-index:1000;
+  position: fixed;
+  height: 8vh;
+  width: 100%;
+  background-color: rgb(246, 239, 239);
+}
+.nav-logo {
+  display:flex;
+  justify-content:center;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:200px;
+  background-image: linear-gradient(to right, var(--darker-blue), var(--light-purple), var(--dark-blue));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  cursor:pointer;
+}
+.nav-header {
+  display: flex;
+  flex-flow: row wrap;
+}
+.navlinks {
+  margin-top: 15px;
+  margin-right:50px;
+}
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width:100%;
+}
+.container li {
+  list-style-type: none;
+}
+.container a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  font-size:14px;
+  margin: 0 10px;
+  text-align: center;
+  color: rgb(79, 99, 93);
+  transition: 0.5s;
+  font-weight: 600;
+}
+.container .align{
+    display:flex;
+    justify-content:center;
+    align-self:center;
+    text-align:center;
+    margin-top:-1px;
+}
+.dropdown{
+    visibility: hidden;
+    display:flex;
+    flex-direction:column;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius:10px;
+    padding:10px 10px;
+    width:auto;
+    transition: all 1s ease-in-out;
+}
+.burger{
+  display:none;
+  cursor:pointer;
+}
+.burger div{
+  width:25px;
+  height:3px;
+  background-color:#000;
+  justify-content:center;
+  align-self:center;
+  margin:5px;
+}
+@media screen and (max-width: 768px){
+  body{
+    overflow-x:visible;
+  }
+  .burger{
+    display:block;
+    margin-top:-3px;
+  }
+  .container{
+    position:absolute;
+    top:8vh;
+    right:0;
+    flex-direction:column;
+    align-items:center;
+    height:92vh;
+    background-color: grey;
+    width:50%;
+    align-self:center;
+    transform:translateX(100%);
+    transition: all .5s linear;
+  }
+  .container ul{
+    margin:100px;
+  }
+  .container a{
+    color:#fff;
+  }
+  .dropdown{
+    margin-top:5px;
+    background-color: #808080;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    z-index: 1000;
+  }
+  .nav-logo{
+    margin-left:60px;
+  }
+}
+
+@keyframes navLinkFade{
+  from{
+    opacity:0;
+    transform:translateX(50px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0px);
+  }
+}
+
+.active{
+  transform: translateX(0%);
+}
+
+.toggle .line1{
+  opacity:1;
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+  opacity:0;
+}
+.toggle .line3{
+  opacity:1;
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.body-section{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+  position:relative;
+  top:8vh;
+}
+.body-img img{
+  width:600px;
+  height:500px;
+  border-radius:10px;
+  transform:translate(40%, 10%);
+  background-size:contain;
+  background:transparent;
+}
+.body-section .body-text{
+  position:absolute;
+  top: 30%;left:10%;
+  display:flex;
+  margin:0;
+  line-height:90px;
+}
+.body-section .body-text h1{
+  font-size:80px;
+  letter-spacing:3px;
+}
+.body-section .body-text h1 span{
+  color: var(--darker-blue);
+}
