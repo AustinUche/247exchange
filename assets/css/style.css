@@ -18,13 +18,15 @@ body{
   overflow-x:hidden;
 }
 body::before{
+  display:flex;
+  flex-flow:row wrap;
   content:'';
   position:absolute;
-  height:500px;
-  width:500px;
-  top:-20%;
+  height:100%;
+  width:100%;
+  top:-15%;
   left:-20%;
-  opacity:.9;
+  opacity:.5;
   background-color:var(--darker-blue);
   border-radius: 50%;
   z-index:-1;
@@ -36,7 +38,7 @@ body::after{
   width:500px;
   background-color:var(--darker-blue);
   top:50%;
-  opacity:.9;
+  opacity:.5;
   right:-20%;
   border-radius: 50%;
   z-index:-1;
@@ -49,20 +51,25 @@ nav {
   position: fixed;
   height: 8vh;
   width: 100%;
-  background-color: rgb(246, 239, 239);
+  /* background-color: rgb(246, 239, 239); */
+  background-color:#fff;
 }
 .nav-logo {
   display:flex;
   justify-content:center;
   margin-top:10px;
   margin-bottom:10px;
-  margin-left:200px;
+  font-size:30px;
+  margin-left:150px;
   background-image: linear-gradient(to right, var(--darker-blue), var(--light-purple), var(--dark-blue));
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   cursor:pointer;
+}
+.nav-logo h1{
+  font-family:'Rubik Burned';
 }
 .nav-header {
   display: flex;
@@ -137,7 +144,7 @@ nav {
     flex-direction:column;
     align-items:center;
     height:92vh;
-    background-color: grey;
+    background-color: var(--darker-blue);
     width:50%;
     align-self:center;
     transform:translateX(100%);
@@ -151,7 +158,7 @@ nav {
   }
   .dropdown{
     margin-top:5px;
-    background-color: #808080;
+    background-color: var(--darker-blue);
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     z-index: 1000;
   }
@@ -195,24 +202,103 @@ nav {
   top:8vh;
 }
 .body-img img{
-  width:600px;
-  height:500px;
+  width:50%;
+  height: 120%;
   border-radius:10px;
-  transform:translate(40%, 10%);
+  margin-top:20px;
+  transform:translate(110%, 10%);
   background-size:contain;
   background:transparent;
+  opacity:.9;
+  box-shadow:0 3px 10px rgb(0 0 0 / 0.2);
 }
-.body-section .body-text{
-  position:absolute;
-  top: 30%;left:10%;
+.body-text{
   display:flex;
   margin:0;
-  line-height:90px;
+  line-height:80px;
 }
 .body-section .body-text h1{
+  position:absolute;
+  top: 40%;left:10%;
   font-size:80px;
-  letter-spacing:3px;
+  letter-spacing:2px;
+  font-family: 'Roboto', sans-serif;
+}
+.body-section .body-text p{
+  position:absolute;
+  top:90%;left:10%;
+  margin-top:20px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing:1px;
 }
 .body-section .body-text h1 span{
   color: var(--darker-blue);
 }
+
+@-webkit-keyframes round {
+    0% {
+        -webkit-transform: rotate(0deg) translate(-50px) rotate(0deg);
+        transform: rotate(0deg) translate(-50px) rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn) translate(-50px) rotate(-1turn);
+        transform: rotate(1turn) translate(-50px) rotate(-1turn)
+    }
+}
+
+@keyframes round {
+    0% {
+        -webkit-transform: rotate(0deg) translate(-50px) rotate(0deg);
+        transform: rotate(0deg) translate(-50px) rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn) translate(-50px) rotate(-1turn);
+        transform: rotate(1turn) translate(-50px) rotate(-1turn)
+    }
+}
+
+.round{
+  font-size:30px;
+  position:absolute;
+  top:35%;
+  left:9%;
+  -webkit-animation: round 20s infinite;
+  animation: round 20s infinite;
+  color:#f7931a;
+}
+.rounde{
+  font-size:30px;
+  position:absolute;
+  top:25%;
+  left:38%;
+  -webkit-animation: round 20s infinite;
+  animation: round 20s infinite;
+  color: #497493;
+}
+.rounder{
+  font-size:30px;
+  position:absolute;
+  top:110%;
+  left:25%;
+  -webkit-animation: round 20s infinite;
+  animation: round 20s infinite;
+  color:#1b95ca;
+}
+.fa-whatsapp{
+  color:green;
+}
+.fa-instagram{
+  background-image: conic-gradient(#f9ce34, #ee2a7b, #6228d7);
+  -webkit-background-clip: text;
+  -moz-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  -moz-text-fill-color:transparent;
+}
+.fa-x-twitter{
+  color: #141714;
+}
+
+
+
