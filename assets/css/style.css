@@ -45,7 +45,7 @@ body::after{
 } 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   top:0;
   z-index:1000;
   position: fixed;
@@ -56,7 +56,6 @@ nav {
 }
 .nav-logo {
   display:flex;
-  justify-content:center;
   margin-top:10px;
   margin-bottom:10px;
   font-size:30px;
@@ -212,7 +211,7 @@ nav {
   opacity:.9;
   box-shadow:0 3px 10px rgb(0 0 0 / 0.2);
 }
-.body-text{
+.body-section .body-text{
   display:flex;
   margin:0;
   line-height:80px;
@@ -230,6 +229,7 @@ nav {
   margin-top:20px;
   font-family: 'Roboto', sans-serif;
   letter-spacing:1px;
+  margin-left:9px;
 }
 .body-section .body-text h1 span{
   color: var(--darker-blue);

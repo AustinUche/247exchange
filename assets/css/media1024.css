@@ -1,23 +1,15 @@
 @media screen and (max-width: 1024px) {
-  .nav-logo {
-    display: block;
-    margin-left:50px;
-  }
   .body-img img {
     width: 40%;
     height: 120%;
     margin-top: 20px;
     transform: translate(120%, 20%);
   }
-  .body-text {
-    /* line-height: 70px; */
-  }
   .body-section .body-text h1 {
     top: 40%;
     left: 10%;
     font-size: 70px;
     letter-spacing: 1px;
-    /* margin-bottom:0px; */
   }
   .body-section .body-text p {
     width:50%;
@@ -29,11 +21,12 @@
   }
   .navlinks{
     width:50%;
-    margin-left: -30%;
-    /* padding:1px; */
+    margin-left:-210px;
   }
-  .container {
-    margin-right:50px;
-    font-size:12px;
+  .container a{
+    font-size:14px;
+  }
+  .nav-logo {
+    margin-left:-45px;
   }
 }

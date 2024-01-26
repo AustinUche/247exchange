@@ -1,0 +1,49 @@
+@media screen and (max-width:430px){
+    .burger{
+        margin-left:100px;
+        margin-top:10px;
+    }
+    .nav-logo{
+        margin: 10px 100px 10px 30px;
+    }
+    .container{
+        transform:translateX(50%);
+    }
+    .active{
+        transform:translateX(-60%);
+    }
+    body::before{
+        height:400px;
+        width:400px;
+        top:-3%;
+        left:-49%;
+        opacity:.3;
+    }
+    body::after{
+        height: 400px;
+        width:400px;
+        opacity:.3;
+        top:30%;
+        right:-50%;
+    }
+    .body-section .body-text{
+        line-height: 70px;
+    }
+    .body-section .body-text h1{
+        margin-left:40px;
+        top:15%;
+        font-size: 60px;
+    }
+    .body-section .body-text p{
+        top: 110%;width:70%;
+        margin-left:40px;
+        margin-top:10px;
+    }
+    .body-section .body-img img{
+        width:80%;
+        height:160%;
+        transform:translate(15%, 90%);
+        background-position: center;
+        background-size:contain;
+    }
+}
