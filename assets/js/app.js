@@ -1,5 +1,5 @@
 const navSlide = () => {
-  let navMenu = document.querySelector(".container");
+  let navMenu = document.querySelector(".navlinks .container");
   let burger = document.querySelector("#burger");
   let navLinks = document.querySelectorAll(".container li");
 
