@@ -15,12 +15,12 @@ body{
 .header{
     width:100%;
     padding:1rem 0;
-    min-height: 8vh;
+    top:0;
+    height:10vh;
     background-image: linear-gradient(to right, var(--darker), var(--lighter));
 }
 .header .container{
     display:flex;
-    flex-flow:row wrap;
     width:80%;
     margin:auto;
     justify-content: space-between;
@@ -82,23 +82,12 @@ body{
     .header .container h1{
         font-size: 2rem;
     }
-    .header .container ul{
-        top: 8vh;
-        height: 91vh;
-    }
 }
 
 /* 375 */
 @media screen and (max-width:23.438rem){
     .header .container h1{
         font-size: 1rem;
-    }
-    .header .container ul{
-        top:12vh;
-        height: 90vh;
-    }
-    .header .container ul li{
-        margin:3rem;
     }
     .header .container .burger div{
         width:30px;
@@ -121,11 +110,14 @@ body{
 
 /* 540px */
 @media screen and (max-width:33.75rem){
-    .header .container ul{
-        top:12vh;
-    }
     .header .container ul li{
         margin:3.5rem;
+    }
+    .header .container .burger{
+        margin-left:-5rem !important;
+    }
+     .header .container h1{
+        margin-left:1rem !important;
     }
 }
 
@@ -133,34 +125,58 @@ body{
 @media screen and (max-width:48rem){
     .header .container {
         flex-flow:nowrap;
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
     .header .container ul{
         position:absolute;
-        top:8vh;
+        top: 10vh;
         right:0;
-        height:92vh;
+        height:90vh;
         flex-direction:column;
         width:100%;
         justify-content:center;
         align-items:center;
         text-align:center;
         background-color: var(--lighter);
-        transition:all .5s ease-in-out;
-        transform:translateX(100%);
+        transition:all 1s ease-in-out;
+        transform:translateY(-1000%);
+    }
+    .header .container h1{
+        margin-left:1rem;
+        margin-top:.5rem !important;
     }
     .header .container ul li{
-        margin:5rem;
+        margin: 4rem !important;
     }
    .header .container ul li a{
         font-size: 1.2rem;
     }
     .header .container .burger{
         display: block;
+        margin-left:13rem;
+        margin-top:.3rem !important;
+    }
+}
+
+/* 1024px */
+@media screen and (max-width:64rem){
+    .header .container{
+        display:flex;
+        justify-content: center;
+    }
+    .header .container h1{
+        margin-top:-1rem;
+        margin-right:9.5rem;
+    }
+    .header .container ul li{
+        margin-top:-1rem;
     }
 }
 
 .header .container ul.active{
-    transform:translateX(0%);
+    transform:translateY(0%);
 }
 @keyframes navLinkFade {
   from {
