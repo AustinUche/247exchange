@@ -1,13 +1,10 @@
 const navSlide = () => {
-  let navMenu = document.querySelector(".navlinks .container");
-  let burger = document.querySelector("#burger");
-  let navLinks = document.querySelectorAll(".container li");
+  let navMenu = document.querySelector(".header .container ul");
+  let burger = document.querySelector(".header .container .burger");
+  let navLinks = document.querySelectorAll(".header .container ul li");
 
   burger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
-    // window.onclick(onmousedown, () => {
-    //   navMenu.style.transform = "translateX(0%)";
-    // });
 
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
