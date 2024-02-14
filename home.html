@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>247exchange</title>
     <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/lib/boxicons-2.1.4/boxicons-2.1.4/css/boxicons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
@@ -16,10 +18,10 @@
                 <h1>247exchange</h1>
                 <ul>
                     <li><a href="/">home</a></li>
-                    <li><a href="/">about</a></li>
-                    <li><a href="/">services</a></li>
-                    <li><a href="/">contact</a></li>
-                    <li><a href="/" class="faq">faq</a></li>
+                    <li><a href="/about.html">about</a></li>
+                    <li><a href="/services.html">services</a></li>
+                    <li><a href="/contact.html">contact</a></li>
+                    <li><a href="/faq.html" class="faq">faq</a></li>
                 </ul>
             </div>
             <div class="right">
@@ -29,7 +31,8 @@
                             <img src="./assets/images/btc-logo.png" alt="">
                         </div>
                         <div class="bitcoin-right">
-                            <h3>$ <span id="bitcoin"></span></h3>
+                            <h3 id="bitcoin"></h3>
+                            <i class='bx bxs-down-arrow' id="down1"></i>
                             <p>Bitcoin</p>
                         </div>
                     </div>
@@ -38,7 +41,8 @@
                             <img src="./assets/images/eth-logo.png" alt="">
                         </div>
                         <div class="ethereum-right">
-                            <h3>$ <span id="ethereum"></span></h3>
+                            <h3 id="ethereum"></h3>
+                            <i class='bx bxs-down-arrow' id="down2"></i>
                             <p>Ethereum</p>
                         </div>
                     </div>
@@ -47,7 +51,8 @@
                             <img src="./assets/images/bnb-logo.png" alt="">
                         </div>
                         <div class="bnb-right">
-                            <h3>$000</h3>
+                            <h3 id="binance"></h3>
+                            <i class='bx bxs-down-arrow' id="down3"></i>
                             <p>BNB</p>
                         </div>
                     </div>
@@ -56,7 +61,8 @@
                             <img src="./assets/images/dogecoin-logo.png" alt="">
                         </div>
                         <div class="dogecoin-right">
-                            <h3>$000</h3>
+                            <h3 id="dogecoin"></h3>
+                            <i class='bx bxs-down-arrow' id="down4"></i>
                             <p>Dogecoin</p>
                         </div>
                     </div>
@@ -65,13 +71,19 @@
                             <img src="./assets/images/litecoin.png" alt="">
                         </div>
                         <div class="litecoin-right">
-                            <h3>$000</h3>
+                            <h3 id="litecoin"></h3>
+                            <i class='bx bxs-down-arrow' id="down5"></i>
                             <p>Litecoin</p>
                         </div>
                     </div>
                 </div>
                 <div class="middle">
                     <div class="middle-left">
+                        <div class="icons">
+                            <i class="fa-brands fa-bitcoin round"></i>
+                            <i class="fa-brands fa-ethereum rounde"></i>
+                            <i class="fa-solid fa-coins rounder"></i>
+                        </div>
                         <h1>Convert your <span>crypto</span> into cash, with ease.</h1>
                         <p>The best way to sell and cash out your cryptocurrencies at your convenience.</p>
                         <a href="">Convert</a>
@@ -80,7 +92,60 @@
                         <img src="./assets/images/background.png" alt="">
                     </div>
                 </div>
-                <div class="down"></div>
+                <div class="down">
+                    <div class="price-charts">
+                        <div class="bitcoin">
+                            <div class="bitcoin-left">
+                                <img src="./assets/images/cardano-logo.png" alt="">
+                            </div>
+                            <div class="bitcoin-right">
+                                <h3 id="cardano"></h3>
+                                <i class='bx bxs-down-arrow' id="down6"></i>
+                                <p>Cardano</p>
+                            </div>
+                        </div>
+                        <div class="ethereum">
+                            <div class="ethereum-left">
+                                <img src="./assets/images/tether-logo.png" alt="">
+                            </div>
+                            <div class="ethereum-right">
+                                <h3 id="tether"></h3>
+                                <i class='bx bxs-down-arrow' id="down7"></i>
+                                <p>Tether</p>
+                            </div>
+                        </div>
+                        <div class="bnb">
+                            <div class="bnb-left">
+                                <img src="./assets/images/solana-logo.png" alt="">
+                            </div>
+                            <div class="bnb-right">
+                                <h3 id="solana"></h3>
+                                <i class='bx bxs-down-arrow' id="down8"></i>
+                                <p>Solana</p>
+                            </div>
+                        </div>
+                        <div class="dogecoin">
+                            <div class="dogecoin-left">
+                                <img src="./assets/images/polkadot-logo.png" alt="">
+                            </div>
+                            <div class="dogecoin-right">
+                                <h3 id="polkadot"></h3>
+                                <i class='bx bxs-down-arrow' id="down9"></i>
+                                <p>Polkadot</p>
+                            </div>
+                        </div>
+                        <div class="litecoin">
+                            <div class="litecoin-left">
+                                <img src="./assets/images/xrp-logo.png" alt="">
+                            </div>
+                            <div class="litecoin-right">
+                                <h3 id="xrp"></h3>
+                                <i class='bx bxs-down-arrow' id="down10"></i>
+                                <p>XRP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- <h1>the nav</h1>
                 <div class="burger">
                     <div class="line1"></div>
