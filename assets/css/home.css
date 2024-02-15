@@ -231,19 +231,19 @@ body {
   cursor: pointer;
 }
 .main .container .right .middle {
-  width: 100%;
+  width: 80%;
   background-color: var(--dark-bg);
   display: flex;
+  align-items:center;
   height:82vh;
   margin-bottom:4%;
-  /* padding: 2.2rem 0; */
+  padding: 2rem 0;
   flex-wrap: wrap;
   margin-bottom: 0.5%;
 }
 .main .container .right .middle .middle-left {
-  width: 41%;
-  margin-right:3%;
-  padding-top:5rem;
+  width: 40%;
+  padding-top:1rem;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -286,7 +286,7 @@ body {
   background-color: #1e3690;
 }
 .main .container .right .middle .middle-right {
-  width: 56%;
+  width: 50%;
 }
 .main .container .right .middle .middle-right img {
   width: 100%;
@@ -344,7 +344,7 @@ body {
   font-size: 30px;
   position: absolute;
   top: 70%;
-  left: 35%;
+  left: 40%;
   -webkit-animation: round 20s infinite;
   animation: round 10s infinite;
   color: #1b95ca;
