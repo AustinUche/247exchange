@@ -1,343 +1,60 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-    font-family:sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
 }
-:root{
-    --dark-bg: #070B14;
-    --light-bg:#111820;
-    --text-color:#FEFEFE;
-    --btn-blue:#6672FB;
-    --dark-btn-blue: #4f5df5;
+:root {
+  --dark-bg: #070b14;
+  --light-bg: #111820;
+  --text-color: #fefefe;
+  --btn-blue: #6672fb;
+  --dark-btn-blue: #4f5df5;
 }
-body{
-    overflow-x: hidden;
+body {
+  overflow: hidden;
 }
-.main{
-    height:100vh;
-    width:100%;
-    background-color:var(--light-bg) ;
+.main {
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--light-bg);
 }
-.main .container{
-    width:100%;
-    height: 50px;
-    /* padding: 8px 10%; */
-    display:flex;
-    justify-content:space-between;
+.main .container {
+  width: 100%;
+  height: 50px;
+  /* padding: 8px 10%; */
+  display: flex;
+  justify-content: space-between;
 }
-.main .container .navlinks{
-    display:flex;
-    margin-right:.5%;
-    background-color: var(--dark-bg);
-    border-radius: 10px;
-    height:100vh;
-    width:25%;
+.main .container .navlinks {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5%;
+  background-color: var(--dark-bg);
+  border-radius: 10px;
+  height: 100vh;
+  position: relative;
+  z-index:10;
 }
-.main .container .navlinks h1{
-    background: linear-gradient(to bottom, #3096E4, #B86AC5);
-    -webkit-text-fill-color:transparent;
-    -webkit-background-clip:text;
-    font-size:3em;
-    font-weight:900;
-    top:10px;
-    left:15px;
-    position:absolute;
+.main .container .navlinks .burger{
+  display:none;
 }
-.main .container .navlinks ul{
-    display:flex;
-    flex-direction:column;
-    padding:2.5rem 1rem;
-    margin-top:2.5rem;
+.main .container .navlinks .burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.5s ease-in-out;
 }
-.main .container .navlinks ul li{
-    list-style: none;
-    margin-top:5rem;
-    margin-left:2.5rem;
-    background: var(--btn-blue);
-    box-shadow: 2px 2px 1px rgba(255, 255, 255, 0.6);
-    padding:1.2rem 7rem;
-    border-radius:10px;
-    cursor:pointer;
-    transition:all .5s ease-in-out;
-}
-.main .container .navlinks ul li:hover{
-    background:var(--dark-btn-blue);
-    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.6);
-}
-.main .container .navlinks ul li a{
-    text-transform:capitalize;
-    text-decoration:none;
-    text-align:center;
-    color:#000;
-}
-.main .container .navlinks ul li a.faq{
-    text-transform:uppercase;
-}
-.main .container .right{
-    display:flex;
-    flex-wrap:wrap;
-    width:82%;
-    background-color: var(--dark-bg);
-}
-.main .container .right .price-charts{
-    width:100%;
-    height:8vh;
-    display:flex;
-    background-color: var(--dark-bg);
-    margin-bottom:.5%;
-    padding:.5rem 3rem;
-    gap:45px;
-}
-.main .container .right .price-charts .bitcoin{
-    width:20%;
-    height:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor:pointer;
-}
-.main .container .right .price-charts .bitcoin .bitcoin-left,
-.main .container .right .price-charts .ethereum .ethereum-left,
-.main .container .right .price-charts .bnb .bnb-left,
-.main .container .right .price-charts .dogecoin .dogecoin-left,
-.main .container .right .price-charts .litecoin .litecoin-left
-{
-    width:30%;
-    height: 100%;
-    display:flex;
-    justify-content: center;
-}
-.main .container .right .price-charts .bitcoin .bitcoin-left img,
-.main .container .right .price-charts .ethereum .ethereum-left img,
-.main .container .right .price-charts .bnb .bnb-left img,
-.main .container .right .price-charts .dogecoin .dogecoin-left img,
-.main .container .right .price-charts .litecoin .litecoin-left img
-{
-    width:40px;
-    height: 40px;
-    margin-top:.3rem;
-}
-.main .container .right .price-charts .bitcoin .bitcoin-right,
-.main .container .right .price-charts .ethereum .ethereum-right,
-.main .container .right .price-charts .bnb .bnb-right,
-.main .container .right .price-charts .dogecoin .dogecoin-right,
-.main .container .right .price-charts .litecoin .litecoin-right
-{
-    width:70%;
-    height: 100%;
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-.main .container .right .price-charts .bitcoin .bitcoin-right h3,
-.main .container .right .price-charts .ethereum .ethereum-right h3,
-.main .container .right .price-charts .bnb .bnb-right h3,
-.main .container .right .price-charts .dogecoin .dogecoin-right h3,
-.main .container .right .price-charts .litecoin .litecoin-right h3
-{
-    width:100%;
-    margin-top:.2rem;
-    font-weight: 900;
-}
-.main .container .right .price-charts .bitcoin .bitcoin-right i,
-.main .container .right .price-charts .ethereum .ethereum-right i,
-.main .container .right .price-charts .bnb .bnb-right i,
-.main .container .right .price-charts .dogecoin .dogecoin-right i,
-.main .container .right .price-charts .litecoin .litecoin-right i
-{
-    color: var(--text-color);
-}
-.main .container .right .price-charts .bitcoin .bitcoin-right p,
-.main .container .right .price-charts .ethereum .ethereum-right p,
-.main .container .right .price-charts .bnb .bnb-right p,
-.main .container .right .price-charts .dogecoin .dogecoin-right p,
-.main .container .right .price-charts .litecoin .litecoin-right p
-{
-    color: var(--text-color);
-    width:100%;
-    margin-top:.2rem;
-    font-weight:800;
-}
-.main .container .right .price-charts .ethereum{
-    width:20%;
-    height:100%;
-    display:flex;
-    cursor:pointer;
-}
-.main .container .right .price-charts .bnb{
-    width:20%;
-    height:100%;
-    display:flex;
-    cursor:pointer;
-}
-.main .container .right .price-charts .dogecoin{
-    width:20%;
-    height:100%;
-    display:flex;
-    cursor:pointer;
-}
-.main .container .right .price-charts .litecoin{
-    width:20%;
-    height:100%;
-    display:flex;
-    cursor:pointer;
-}
-.main .container .right .middle{
-    width:100%;
-    background-color: var(--dark-bg);
-    display:flex;
-    padding: .6rem 0;
-    flex-wrap:wrap;
-    margin-bottom:  0.5%;
-}
-.main .container .right .middle .middle-left{
-    width:50%;
-    height: 80vh;
-    display:flex;
-    flex-wrap:nowrap;
-    flex-direction:column;
-    padding-top:10rem;
-    padding-left:1rem;
-}
-.main .container .right .middle .middle-left h1{
-    font-size: 5rem;
-    color:var(--text-color);
-    z-index:3;
-}
-.main .container .right .middle .middle-left h1 span{   
-    background: linear-gradient(to right, #3096E4, #B86AC5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.main .container .right .middle .middle-left p{
-    color:var(--text-color);
-    font-size:1.8rem;
-    z-index:3;
-}
-.main .container .right .middle .middle-left a{
-    text-decoration:none;
-    text-align:center;
-    color:var(--text-color);
-    border:3px solid #1E3690;
-    background-color: #1E3690;
-    width:30%;
-    padding:1rem 3rem;
-    margin-top:1rem;
-    border-radius:50px;
-    transition:all .5s ease-in-out;
-    z-index:3;
-}
-.main .container .right .middle .middle-left a:hover{
-    background-color: #1E3690;
-}
-.main .container .right .middle .middle-right{
-    width:50%;
-    height:100%;
-}
-.main .container .right .middle .middle-right img{
-    width:100%;
-    height: 100%;
-}
-.main .container .right .down{
-    width:100%;
-    height:8vh;
-    background-color: var(--dark-bg);
-}
-
-@-webkit-keyframes round {
-    0% {
-        -webkit-transform: rotate(0deg) translate(-50px) rotate(0deg);
-        transform: rotate(0deg) translate(-50px) rotate(0deg)
-    }
-
-    to {
-        -webkit-transform: rotate(1turn) translate(-50px) rotate(-1turn);
-        transform: rotate(1turn) translate(-50px) rotate(-1turn)
-    }
-}
-
-@keyframes round {
-    0% {
-        -webkit-transform: rotate(0deg) translate(-50px) rotate(0deg);
-        transform: rotate(0deg) translate(-50px) rotate(0deg)
-    }
-
-    to {
-        -webkit-transform: rotate(1turn) translate(-50px) rotate(-1turn);
-        transform: rotate(1turn) translate(-50px) rotate(-1turn)
-    }
-}
-
-.round{
-  font-size:30px;
-  position:absolute;
-  top:30%;
-  left:27%;
-  -webkit-animation: round 20s infinite;
-  animation: round 10s infinite;
-  color:#f7931a;
-}
-.rounde{
-  font-size:30px;
-  position:absolute;
-  top:25%;
-  left:45%;
-  -webkit-animation: round 20s infinite;
-  animation: round 10s infinite;
-  color: #497493;
-}
-.rounder{
-  font-size:30px;
-  position:absolute;
-  top:70%;
-  left:35%;
-  -webkit-animation: round 20s infinite;
-  animation: round 10s infinite;
-  color:#1b95ca;
-  /* z-index:1; */
-}
-
-
-
-
-
-/* 
-.main .container .right .burger{
-    display:none;
-    cursor:pointer;
-    position:absolute;
-    top:2%;
-    left:2%;
-    z-index:1000;
-    background-color:#c9d5e0;
-    width:auto;
-    padding:.5rem;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 3px 3px 10px;
-}
-.main .container .right .burger.change{
-    transition-delay: .5s;
-    background-color: #acbaca;
-    box-shadow: inset 5px 5px 10px;
-}
-.main .container .right .burger div{
-    width:25px;
-    height:3px;
-    background-color: black;
-    margin:5px; 
-    transition:all .5s ease-in-out;
-}
-
-
-
-
-
-
 .main .container .navlinks.active {
   transform: translateX(0%);
+}
+.main .container .navlinks .burger.change {
+  transition-delay: 0.5s;
+  background-color: #acbaca;
+  box-shadow: inset 5px 5px 10px;
 }
 @keyframes navLinkFade {
   from {
@@ -359,4 +76,315 @@ body{
 .toggle .line3 {
   opacity: 1;
   transform: rotate(45deg) translate(-5px, -6px);
-} */
+}
+.main .container .navlinks h1 {
+  background: linear-gradient(to bottom, #3096e4, #b86ac5);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 2.5rem;
+  font-weight: 900;
+  top: 10px;
+  left: 15px;
+  position: absolute;
+}
+.main .container .navlinks ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+.main .container .navlinks ul li {
+  list-style: none;
+  margin-top: 5rem;
+  background: var(--btn-blue);
+  box-shadow: 2px 2px 1px rgba(255, 255, 255, 0.6);
+  padding: 1.2rem 7rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.main .container .navlinks ul li:hover {
+  background: var(--dark-btn-blue);
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.6);
+}
+.main .container .navlinks ul li a {
+  text-transform: capitalize;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+}
+.main .container .navlinks ul li a.faq {
+  text-transform: uppercase;
+}
+.main .container .right {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--dark-bg);
+}
+.main .container .right .up {
+  width: 100%;
+  background-color: var(--dark-bg);
+  margin-bottom:.5%;
+  display:flex;
+  align-items:center;
+}
+.main .container .right .price-charts {
+  width: 100%;
+  display: flex;
+  height:8vh;
+  align-items: center;
+  background-color: var(--dark-bg);
+  margin-bottom: 0.5%;
+  padding: 0rem 3rem;
+  gap: 45px;
+  animation:slideToLeft 20s infinite linear;
+  z-index:1;
+}
+.main .container .right .price-charts .bitcoin {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.main .container .right .price-charts .bitcoin .bitcoin-left,
+.main .container .right .price-charts .ethereum .ethereum-left,
+.main .container .right .price-charts .bnb .bnb-left,
+.main .container .right .price-charts .dogecoin .dogecoin-left,
+.main .container .right .price-charts .litecoin .litecoin-left {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.main .container .right .price-charts .bitcoin .bitcoin-left img,
+.main .container .right .price-charts .ethereum .ethereum-left img,
+.main .container .right .price-charts .bnb .bnb-left img,
+.main .container .right .price-charts .dogecoin .dogecoin-left img,
+.main .container .right .price-charts .litecoin .litecoin-left img {
+  width: 40px;
+  height: 40px;
+  margin-top: 0.3rem;
+}
+.main .container .right .price-charts .bitcoin .bitcoin-right,
+.main .container .right .price-charts .ethereum .ethereum-right,
+.main .container .right .price-charts .bnb .bnb-right,
+.main .container .right .price-charts .dogecoin .dogecoin-right,
+.main .container .right .price-charts .litecoin .litecoin-right {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main .container .right .price-charts .bitcoin .bitcoin-right h3,
+.main .container .right .price-charts .ethereum .ethereum-right h3,
+.main .container .right .price-charts .bnb .bnb-right h3,
+.main .container .right .price-charts .dogecoin .dogecoin-right h3,
+.main .container .right .price-charts .litecoin .litecoin-right h3 {
+  width: 100%;
+  margin-top: 0.2rem;
+  font-weight: 900;
+}
+.main .container .right .price-charts .bitcoin .bitcoin-right i,
+.main .container .right .price-charts .ethereum .ethereum-right i,
+.main .container .right .price-charts .bnb .bnb-right i,
+.main .container .right .price-charts .dogecoin .dogecoin-right i,
+.main .container .right .price-charts .litecoin .litecoin-right i {
+  color: var(--text-color);
+}
+.main .container .right .price-charts .bitcoin .bitcoin-right p,
+.main .container .right .price-charts .ethereum .ethereum-right p,
+.main .container .right .price-charts .bnb .bnb-right p,
+.main .container .right .price-charts .dogecoin .dogecoin-right p,
+.main .container .right .price-charts .litecoin .litecoin-right p {
+  color: var(--text-color);
+  width: 100%;
+  margin-top: 0.2rem;
+  font-weight: 800;
+}
+.main .container .right .price-charts .ethereum {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+}
+.main .container .right .price-charts .bnb {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+}
+.main .container .right .price-charts .dogecoin {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+}
+.main .container .right .price-charts .litecoin {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+}
+.main .container .right .middle {
+  width: 100%;
+  background-color: var(--dark-bg);
+  display: flex;
+  height:82vh;
+  margin-bottom:4%;
+  /* padding: 2.2rem 0; */
+  flex-wrap: wrap;
+  margin-bottom: 0.5%;
+}
+.main .container .right .middle .middle-left {
+  width: 41%;
+  margin-right:3%;
+  padding-top:5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+.main .container .right .middle .middle-left h1 {
+  width: 100%;
+  font-size: 3.2rem;
+  color: var(--text-color);
+  line-height: 70px;
+  margin-bottom: .5rem;
+  z-index: 3;
+}
+.main .container .right .middle .middle-left h1 span {
+  background: linear-gradient(to right, #3096e4, #b86ac5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main .container .right .middle .middle-left p {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight:400;
+  z-index: 3;
+}
+.main .container .right .middle .middle-left a {
+  text-decoration: none;
+  text-align: center;
+  color: var(--text-color);
+  border: 3px solid #1e3690;
+  background-color: #1e3690;
+  width: 40%;
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  border-radius: 50px;
+  transition: all 0.5s ease-in-out;
+  z-index: 3;
+}
+.main .container .right .middle .middle-left a:hover {
+  background-color: #1e3690;
+}
+.main .container .right .middle .middle-right {
+  width: 56%;
+}
+.main .container .right .middle .middle-right img {
+  width: 100%;
+  height: 100%;
+}
+.main .container .right .down {
+  width: 100%;
+  height: 8vh;
+  background-color: var(--dark-bg);
+}
+
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg) translate(-50px) rotate(0deg);
+    transform: rotate(0deg) translate(-50px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn) translate(-50px) rotate(-1turn);
+    transform: rotate(1turn) translate(-50px) rotate(-1turn);
+  }
+}
+
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg) translate(-50px) rotate(0deg);
+    transform: rotate(0deg) translate(-50px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn) translate(-50px) rotate(-1turn);
+    transform: rotate(1turn) translate(-50px) rotate(-1turn);
+  }
+}
+
+.round {
+  font-size: 30px;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  -webkit-animation: round 20s infinite;
+  animation: round 10s infinite;
+  color: #f7931a;
+}
+.rounde {
+  font-size: 30px;
+  position: absolute;
+  top: 17%;
+  left:55%;
+  -webkit-animation: round 20s infinite;
+  animation: round 10s infinite;
+  color: #497493;
+}
+.rounder {
+  font-size: 30px;
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  -webkit-animation: round 20s infinite;
+  animation: round 10s infinite;
+  color: #1b95ca;
+}
+
+@media only screen and (max-width: 320px) {
+  .main .container .navlinks .burger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 1000;
+    background-color: red;
+    width: auto;
+    padding: 0.5rem;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px;
+  }
+  .main .container .navlinks ul{
+    position:absolute;
+    top:8vh;
+    left:0;
+    width:100%;
+    background-color: green;
+    transform:translateY(-1000%);
+  }
+  .main .container .navlinks h1{
+    display:none;
+  }
+  .main .container .right .price-charts{
+  }
+}
+
+@keyframes slideToLeft{
+    from{
+        transform:translateX(100%);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}

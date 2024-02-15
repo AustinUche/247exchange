@@ -1,6 +1,6 @@
 const navSlide = () => {
-  let navMenu = document.querySelector(".main .container .navlinks");
-  let burger = document.querySelector(".main .container .right .burger");
+  let navMenu = document.querySelector(".main .container .navlinks ul");
+  let burger = document.querySelector(".main .container .navlinks .burger");
   let navLinks = document.querySelectorAll(".main .container .navlinks ul li");
 
   burger.addEventListener("click", () => {
@@ -19,7 +19,7 @@ const navSlide = () => {
     burger.classList.toggle("change");
   });
 };
-// navSlide();
+navSlide();
 
 var btc = document.getElementById("bitcoin");
 var eth = document.getElementById("ethereum");
