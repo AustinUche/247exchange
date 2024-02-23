@@ -1,6 +1,6 @@
 const navSlide = () => {
-  let navMenu = document.querySelector(".main .container .navlinks ul");
-  let burger = document.querySelector(".main .container .navlinks .burger");
+  let navMenu = document.querySelector(".main .container .navlinks");
+  let burger = document.querySelector(".main .container .burger");
   let navLinks = document.querySelectorAll(".main .container .navlinks ul li");
 
   burger.addEventListener("click", () => {
@@ -16,7 +16,6 @@ const navSlide = () => {
       }
     });
     burger.classList.toggle("toggle");
-    burger.classList.toggle("change");
   });
 };
 navSlide();
