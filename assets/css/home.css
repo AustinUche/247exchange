@@ -809,35 +809,70 @@ body {
   }
 }
 
-/* @media only screen and (max-width: 320px) {
-  .main .container .navlinks .burger {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    z-index: 1000;
-    background-color: red;
-    width: auto;
-    padding: 0.5rem;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 3px 3px 10px;
+@media only screen and (max-width: 430px) {
+  .main .container .right .price-charts .bitcoin {
+    width: 50%;
+    gap: 10px;
   }
-  .main .container .navlinks ul {
-    position: absolute;
-    top: 8vh;
-    left: 0;
+  .main .container .right .price-charts .ethereum {
+    width: 59%;
+    gap: 5px;
+  }
+  .main .container .right .price-charts .bnb {
+    width: 50%;
+    gap: 10px;
+  }
+  .main .container .right .price-charts .dogecoin {
+    width: 59%;
+    gap: 5px;
+  }
+  .main .container .right .price-charts .litecoin {
+    width: 50%;
+    gap: 10px;
+  }
+  .main .container .right .down .price-charts .bitcoin {
+    width: 59%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .ethereum {
+    width: 50%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .bnb {
+    width: 50%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .dogecoin {
+    width: 50%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .litecoin {
+    width: 50%;
+    gap: 5px;
+  }
+  .main .container .right .middle {
     width: 100%;
-    background-color: green;
-    transform: translateY(-1000%);
+    flex-direction:column-reverse;
   }
-  .main .container .navlinks h1 {
-    display: none;
+  .main .container .right .middle .middle-left{
+    width:100%;
+    justify-content:center;
+    align-items:center;
   }
-  .main .container .right .price-charts {
+  .main .container .right .middle .middle-right{
+    width:100%;
   }
-} */
+  .main .container .right .middle .middle-left h1 {
+    font-size: 2.5rem;
+    line-height: 50px;
+  }
+  .main .container .right .middle .middle-left p {
+    text-align:center;
+  }
+.main .container .right .middle .middle-left a {
+  margin-top: .5rem;
+}
+}
 
 @keyframes slideToLeft {
   from {
