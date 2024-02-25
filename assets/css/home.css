@@ -750,6 +750,9 @@ body {
     width: 27%;
     gap: 10px;
   }
+  .round, .rounde, .rounder{
+    display:none;
+  }
 }
 
 @media only screen and (max-width: 540px) {
