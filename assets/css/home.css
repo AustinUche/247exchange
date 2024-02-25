@@ -657,12 +657,16 @@ body {
     position: absolute;
     top: 9vh;
     height: 82vh;
+    flex-direction:column-reverse;
+    align-items:center;
     justify-content: center;
   }
   .main .container .right .middle .middle-left {
     width: 100%;
     display: flex;
-    text-align: left;
+    align-items:center;
+    margin:auto;
+    text-align: center;
   }
   .main .container .right .middle .middle-left p {
     width: 80%;
@@ -865,6 +869,81 @@ body {
   .main .container .right .middle .middle-left h1 {
     font-size: 2.5rem;
     line-height: 50px;
+    margin:auto;
+    text-align:center;
+  }
+  .main .container .right .middle .middle-left p {
+    text-align:center;
+  }
+.main .container .right .middle .middle-left a {
+  margin-top: .9rem;
+}
+.round, .rounde, .rounder{
+  display:none;
+}
+}
+
+@media only screen and (max-width: 390px) {
+  .main .container .right .price-charts .bitcoin {
+    width: 55%;
+    gap: 10px;
+  }
+  .main .container .right .price-charts .ethereum {
+    width: 65%;
+    gap: 5px;
+  }
+  .main .container .right .price-charts .bnb {
+    width: 55%;
+    gap: 10px;
+  }
+  .main .container .right .price-charts .dogecoin {
+    width: 65%;
+    gap: 5px;
+  }
+  .main .container .right .price-charts .litecoin {
+    width: 55%;
+    gap: 10px;
+  }
+  .main .container .right .down .price-charts .bitcoin {
+    width: 65%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .ethereum {
+    width: 55%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .bnb {
+    width: 55%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .dogecoin {
+    width: 55%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .litecoin {
+    width: 55%;
+    gap: 5px;
+  }
+  .main .container .right .middle {
+    width: 100%;
+    flex-direction:column-reverse;
+    position:relative;
+  }
+  .main .container .right .middle .middle-left{
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    bottom:30px;
+  }
+  .main .container .right .middle .middle-right{
+    width:100%;
+  }
+  .main .container .right .middle .middle-left h1 {
+    font-size: 2rem;
+    line-height: 40px;
+    margin:auto;
+    text-align:center;
   }
   .main .container .right .middle .middle-left p {
     text-align:center;
@@ -872,6 +951,9 @@ body {
 .main .container .right .middle .middle-left a {
   margin-top: .5rem;
 }
+  .round, .rounde, .rounder{
+    display:none;
+  }
 }
 
 @keyframes slideToLeft {
