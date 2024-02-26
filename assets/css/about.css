@@ -1,0 +1,12 @@
+.main .container .middle .middle-left {
+    width:36% !important;
+}
+.main .container .middle .middle-left h1{
+    font-size: 50px !important;
+}
+.main .container .middle .middle-left p{
+    font-size: 20px !important;
+}
+.main .container .middle .middle-right{
+    width:44% !important;
+}
