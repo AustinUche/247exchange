@@ -547,6 +547,10 @@ body {
     text-align: center;
     transition: all 0.5s ease-in-out;
   }
+  .main .container .navlinks h1{
+    width:100%;
+    margin:auto;
+  }
   .main .container .navlinks ul li {
     width: 75%;
     margin: auto;
@@ -557,13 +561,19 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    position:relative;
+    top:50px;
+  }
+  .main .container .navlinks p{
+    position:relative;
+    top:70px;
   }
   .main .container .burger {
     display: block;
     cursor: pointer;
     position: absolute;
     top: 10%;
-    right: 2%;
+    right: 5%;
     z-index: 1001;
     background-color: #111820;
     width: auto;
@@ -959,6 +969,126 @@ body {
   }
 }
 
+@media only screen and (max-width: 360px) {
+  .main .container .right .up .price-charts,
+  .main .container .right .down .price-charts {
+    animation: slideToLeftMobile390down 20s infinite linear;
+  }
+  .main .container .right .price-charts .bitcoin {
+    width: 60%;
+    gap: 10px;
+  }
+  .main .container .right .price-charts .ethereum {
+    width: 70%;
+    gap: 5px;
+  }
+  .main .container .right .price-charts .bnb {
+    width: 55%;
+    gap: 10px;
+  }
+  .main .container .right .price-charts .dogecoin {
+    width: 80%;
+    gap: 5px;
+  }
+  .main .container .right .price-charts .litecoin {
+    width: 55%;
+    gap: 10px;
+  }
+  .main .container .right .down .price-charts .bitcoin {
+    width: 75%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .ethereum {
+    width: 70%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .bnb {
+    width: 65%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .dogecoin {
+    width: 75%;
+    gap: 5px;
+  }
+  .main .container .right .down .price-charts .litecoin {
+    width: 70%;
+    gap: 5px;
+  }
+  .main .container .right .middle {
+    width: 100%;
+    flex-direction:column-reverse;
+    position:relative;
+  }
+  .main .container .right .middle .middle-left{
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    bottom:30px;
+  }
+  .main .container .right .middle .middle-right{
+    width:100%;
+  }
+  .main .container .right .middle .middle-left h1 {
+    font-size: 2rem;
+    line-height: 40px;
+    margin:auto;
+    text-align:center;
+  }
+  .main .container .right .middle .middle-left p {
+    text-align:center;
+  }
+.main .container .right .middle .middle-left a {
+  margin-top: .5rem;
+}
+  .round, .rounde, .rounder{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .main .container .right .middle {
+    position: absolute;
+    top: 9vh;
+    height: 82vh;
+    flex-direction:column-reverse;
+    align-items:center;
+    justify-content: center;
+  }
+  .main .container .right .middle .middle-left {
+    width: 100%;
+    display: flex;
+    align-items:center;
+    margin:auto;
+    text-align: center;
+  }
+  .main .container .right .middle .middle-left h1{
+    font-size:1.5rem;
+    line-height:30px;
+  }
+  .main .container .right .middle .middle-left p {
+    width: 80%;
+  }
+  .main .container .right .middle .middle-left a {
+    padding: 0.6rem 2rem;
+  }
+  .main .container .right .middle .middle-right {
+    width: 70%;
+  }
+  .main .container .navlinks h1{
+    width:100%;
+    margin:auto;
+  }
+  .main .container .navlinks ul li {
+    margin-top: 1.3rem;
+    padding:.5rem .7rem;
+    top:10px;
+  }
+  .main .container .navlinks p{
+    top:10px;
+  }
+}
+
 @keyframes slideToLeft {
   from {
     transform: translateX(100%);
@@ -974,5 +1104,14 @@ body {
   }
   to {
     transform: translateX(-250%);
+  }
+}
+
+@keyframes slideToLeftMobile390down{
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform:translateX(-360%);
   }
 }

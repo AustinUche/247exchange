@@ -16,31 +16,70 @@
     font-size: 20px;
     color:#eee;
 }
-.main .container .middle .middle-left-c a{
+.main .container .middle .middle-left-c .links {
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+.main .container .middle .middle-left-c .links a{
     font-size:40px;
     text-decoration:none;
     display:flex;
     align-items:center;
     gap:10px;
 }
-.main .container .middle .middle-left-c a i.bxl-gmail{
+.main .container .middle .middle-left-c .links a i.bxl-gmail{
     background: linear-gradient(to right, #3e65cf,	#3b60c4, #c71610,	#f2a60c,#08851b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
-.main .container .middle .middle-left-c a i.bxs-envelope{
+.main .container .middle .middle-left-c .links a i.bxs-envelope{
     color:#fff;
 }
-.main .container .middle .middle-left-c a i.bxl-whatsapp-square{
+.main .container .middle .middle-left-c .links a i.bxl-whatsapp-square{
     background:#25B53B;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.main .container .middle .middle-left-c a i.bxl-instagram-alt{
+.main .container .middle .middle-left-c .links a i.bxl-instagram-alt{
     background: conic-gradient(#f9ce34, #ee2a7b, #6228d7);   
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
 .main .container .right .middle .middle-right{
     width:55%;
+}
+
+
+@media only screen and (max-width:690px){
+    .main .container .right .middle{
+        width:100%;
+    }
+  .main .container .right .middle .middle-left-c {
+    width: 100%;
+    display: flex;
+    align-items:center;
+    margin:auto;
+    text-align: center;
+    gap:10px;
+  }
+  .main .container .right .middle .middle-left-c h1{
+    font-size: 40px;
+  }
+  .main .container .right .middle .middle-left-c p {
+    /* width: 80%; */
+  }
+  .main .container .right .middle .middle-left-c .links {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items:center;
+    gap:20px;
+  }
+.main .container .middle .middle-left-c .links a{
+    gap:5px;
+}
+  .main .container .right .middle .middle-right {
+    width: 100%;
+  }
 }
