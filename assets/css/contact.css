@@ -66,9 +66,6 @@
   .main .container .right .middle .middle-left-c h1{
     font-size: 40px;
   }
-  .main .container .right .middle .middle-left-c p {
-    /* width: 80%; */
-  }
   .main .container .right .middle .middle-left-c .links {
     display:flex;
     flex-direction: row;
