@@ -1,0 +1,21 @@
+.main .container .middle .middle-left{
+    width:35% !important;
+    margin-right:5%;
+    margin-left:1%;
+}
+.main .container .middle .middle-left p{
+    margin-bottom: 10px !important;
+}
+.main .container .middle .middle-left ul{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    margin-left:30px;
+}
+.main .container .middle .middle-left ul li{
+    list-style-type:square;
+    color:#eee;
+}
+.main .container .middle .middle-right{
+    width:65%;
+}

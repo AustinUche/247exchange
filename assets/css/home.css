@@ -86,35 +86,40 @@ body {
   font-size: 2.5rem;
   font-weight: 900;
   top: 10px;
-  left: 15px;
+  left: 2rem;
   position: absolute;
+  font-family:"Raleway", sans-serif;
+  text-align:center;
 }
 .main .container .navlinks ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 1.5rem 1rem;
-  /* margin-top: 2rem; */
+  padding: 1.5rem 7rem;
 }
 .main .container .navlinks ul li {
   list-style: none;
   margin-top: 3rem;
-  background: var(--btn-blue);
-  box-shadow: 2px 2px 1px rgba(255, 255, 255, 0.6);
-  padding: 1.2rem 7rem;
+  /* background: var(--btn-blue); */
+  background: linear-gradient(to bottom, #3096e4, #b86ac5);
+  padding: .8rem 5rem;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .main .container .navlinks ul li:hover {
-  background: var(--dark-btn-blue);
-  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+  background: linear-gradient(to top, #3096e4, #b86ac5);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  transition:all 1s linear;
 }
 .main .container .navlinks ul li a {
+  font-size:14px;
   text-transform: capitalize;
   text-decoration: none;
   text-align: center;
   color: #000;
+  font-family:"Open Sans", sans-serif;
+  font-weight:600;
 }
 .main .container .navlinks ul li a.faq {
   text-transform: uppercase;
@@ -123,6 +128,7 @@ body {
   color: #fff;
   font-weight: 400;
   font-size: 12px;
+  font-family:"Open Sans", sans-serif;
 }
 .main .container .right {
   display: flex;
@@ -194,6 +200,7 @@ body {
   width: 100%;
   margin-top: 0.2rem;
   font-weight: 900;
+  font-family:"Open Sans", sans-serif;
 }
 .main .container .right .price-charts .bitcoin .bitcoin-right i,
 .main .container .right .price-charts .ethereum .ethereum-right i,
@@ -210,7 +217,8 @@ body {
   color: var(--text-color);
   width: 100%;
   margin-top: 0.2rem;
-  font-weight: 800;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
 }
 .main .container .right .price-charts .ethereum {
   width: 20%;
@@ -262,6 +270,15 @@ body {
   line-height: 70px;
   margin-bottom: 0.5rem;
   z-index: 3;
+  font-family: "Poppins", sans-serif;
+}
+.main .container .right .middle .middle-left h2 {
+  width: 100%;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  z-index: 3;
+  font-family: "Poppins", sans-serif;
 }
 .main .container .right .middle .middle-left h1 span {
   background: linear-gradient(to right, #3096e4, #b86ac5);
@@ -270,10 +287,11 @@ body {
 }
 .main .container .right .middle .middle-left p {
   color: var(--text-color);
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
   font-weight: 400;
   z-index: 3;
+  font-family: "Open Sans", sans-serif;
 }
 .main .container .right .middle .middle-left a {
   text-decoration: none;
@@ -282,11 +300,13 @@ body {
   border: 3px solid #1e3690;
   background-color: #1e3690;
   width: 40%;
-  padding: 1rem 3rem;
+  padding: .8rem 2rem;
   margin-top: 1rem;
   border-radius: 50px;
   transition: all 0.5s ease-in-out;
   z-index: 3;
+  font-weight:600;
+  font-family:"Raleway", sans-serif;
 }
 .main .container .right .middle .middle-left a:hover {
   background-color: #1e3690;
