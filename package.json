@@ -101,5 +101,6 @@
     "wrap-ansi-cjs": "^7.0.0",
     "yaml": "^2.4.1"
   },
+  "keywords": [],
   "description": ""
 }
