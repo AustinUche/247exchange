@@ -1,145 +1,69 @@
-.main .container .middle {
-  width: 77% !important;
-  position: relative;
+.main .container .middle{
+    width:77% !important;
+    position:relative;
 }
-.main .container .middle .middle-main {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
+.main .container .middle .middle-main{
+    display:flex;
+    flex-direction:column;
+    width: 80%;
+    margin:auto;
+    position:relative;
+    /* bottom:50px; */
+    overflow:hidden;
 }
-.main .container .middle .middle-main h2 {
-  color: #fff;
-  font-size: 3rem;
-  margin-bottom: 10px;
+.main .container .middle .middle-main h2{
+    color:#fff;
+    font-size:3rem;
+    margin-bottom:10px;
 }
-.main .container .middle .middle-main p {
-  color: #999;
-  width: 80%;
-  margin-bottom: 40px;
+.main .container .middle .middle-main p{
+    color:#999;
+    width:80%;
+    margin-bottom:40px;
 }
-.main .container .middle .middle-main .the-questions-container {
-  width: 80%;
-  transition: all 5s ease-in-out;
-  z-index: 10;
-  position: relative;
-  top: 10px;
-  overflow: hidden;
+.main .container .middle .middle-main .the-questions-container{
+    width:80%;
+    transition:all 5s ease-in-out;
+    z-index:10;
+    position:relative;
+    top:10px;
 }
 .main .container .middle .middle-main .the-questions-container .question1,
 .main .container .middle .middle-main .the-questions-container .question2,
-.main .container .middle .middle-main .the-questions-container .question3 {
-  background-color: #dcd8d8;
-  border: 1px solid #333;
-  padding: 15px 40px 15px 20px;
-  cursor: pointer;
-  transition: 1s linear;
-  z-index: 10;
-  position: relative;
-  overflow: hidden;
+.main .container .middle .middle-main .the-questions-container .question3{
+    background-color:#dcd8d8;
+    border: 1px solid #333;
+    padding:15px 40px 15px 20px;
+    cursor:pointer;
+    transition:1s linear;
+    z-index:10;
+    position:relative;
+    overflow:hidden;
 }
-.main
-  .container
-  .middle
-  .middle-main
-  .the-questions-container
-  .question1
-  .question
-  .first,
-.main
-  .container
-  .middle
-  .middle-main
-  .the-questions-container
-  .question2
-  .question
-  .first,
-.main
-  .container
-  .middle
-  .middle-main
-  .the-questions-container
-  .question3
-  .question
-  .first {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.main .container .middle .middle-main .the-questions-container .question1 .question .first,
+.main .container .middle .middle-main .the-questions-container .question2 .question .first,
+.main .container .middle .middle-main .the-questions-container .question3 .question .first{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
 }
-.main
-  .container
-  .middle
-  .middle-main
-  .the-questions-container
-  .question1
-  .question
-  .left
-  h3 {
-  color: #000;
+.main .container .middle .middle-main .the-questions-container .question1 .question .left h3{
+    color:#000;
 }
-.main
-  .container
-  .middle
-  .middle-main
-  .the-questions-container
-  .question1
-  .rights
-  i {
-  color: #000;
+.main .container .middle .middle-main .the-questions-container .question1 .rights i{
+    color:#000;
 }
-.main .container .middle .middle-main .the-questions-container .hidden-content {
-  background-color: #ffffff;
-  border: 1px solid #333;
-  padding: 15px 40px 15px 20px;
-  cursor: pointer;
-  z-index: 1;
-  transition: all 0.5s ease-in-out;
-  margin-top: -50px;
+.main .container .middle .middle-main .the-questions-container .hidden-content{
+    background-color:#FFFFFF;
+    border: 1px solid #333;
+    padding:15px 40px 15px 20px;
+    cursor:pointer;
+    z-index:1;
+    transition:all .5s ease-in-out;
+    margin-top:-50px;
 }
-.main
-  .container
-  .middle
-  .middle-main
-  .the-questions-container
-  .hidden-content.active,
-.main
-  .container
-  .middle
-  .middle-main
-  .the-questions-container
-  .hidden-content.active,
-.main
-  .container
-  .middle
-  .middle-main
-  .the-questions-container
-  .hidden-content.active {
-  margin-top: 0px;
-}
-
-@media only screen and (max-width: 1024px) {
-  .main .container .navlinks h1 {
-    left: 2.2rem;
-  }
-  .main .container .navlinks ul li {
-    padding: 0.6rem 4rem;
-  }
-  .main .container .middle {
-    width: 100% !important;
-  }
-  .main
-    .container
-    .middle
-    .middle-main
-    .the-questions-container
-    .hidden-content {
-    margin-top: -65px;
-    padding: 10px 40px 15px 20px;
-  }
-}
-
-@media only screen and (max-width: 430px) {
-    
+.main .container .middle .middle-main .the-questions-container .hidden-content.active,
+.main .container .middle .middle-main .the-questions-container .hidden-content.active,
+.main .container .middle .middle-main .the-questions-container .hidden-content.active{
+    margin-top:0px;
 }

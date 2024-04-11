@@ -18,7 +18,7 @@ const navSlide = () => {
     burger.classList.toggle("toggle");
   });
 };
-// navSlide();
+navSlide();
 
 var btc = document.getElementById("bitcoin");
 var eth = document.getElementById("ethereum");
@@ -162,7 +162,33 @@ $.ajax(settings).done(function (response) {
     down10.style.color = "green";
     down10.classList.remove("bxs-down-arrow");
     down10.classList.add("bxs-up-arrow");
-    }
-  
+  }
 
+})
+
+
+//Frequently asked questions
+let question1 = document.querySelector(".question1")
+let question2 = document.querySelector(".question2")
+let question3 = document.querySelector(".question3")
+let hide1 = document.querySelector("#hidden-content1")
+let hide2 = document.querySelector("#hidden-content2")
+let hide3 = document.querySelector("#hidden-content3")
+
+question1.addEventListener("click", () => {
+  hide1.classList.toggle("active")
+  hide2.classList.remove("active")
+  hide3.classList.remove("active")
+})
+
+question2.addEventListener("click", () => {
+  hide2.classList.toggle("active")
+  hide1.classList.remove("active")
+  hide3.classList.remove("active")
+})
+
+question3.addEventListener("click", () => {
+  hide3.classList.toggle("active")
+  hide1.classList.remove("active")
+  hide2.classList.remove("active")
 })
